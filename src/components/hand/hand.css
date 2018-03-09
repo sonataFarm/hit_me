@@ -1,0 +1,20 @@
+.Hand-container {
+  display: flex;
+  flex-direction: row;
+  height: 282px;
+  justify-content: center;
+  list-style: none;
+  padding: 40px;
+}
+
+.Hand-container li {
+  float: left;
+}
+
+.Hand-lean-left li {
+  transform: rotate(-20deg);
+}
+
+.Hand-lean-right li {
+  transform: rotate(20deg);
+}

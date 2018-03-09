@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.App-container {
+  align-items: center;
+  background: url('../../images/felt.jpg');
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -9,9 +21,9 @@
 
 .App-header {
   background-color: #222;
+  color: white;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {

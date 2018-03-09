@@ -1,0 +1,22 @@
+.Button-container {
+  text-align: center;
+}
+
+.Button-button {
+  color: red;
+  cursor: pointer;
+  font-family: "Lily Script One";
+  font-size: 5rem;
+  padding: 40px;
+  width: auto;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+.Button-button:hover {
+  -webkit-text-fill-color: red;
+}
+
+.Button-button:active {
+  transform: scale(1.1);
+}
