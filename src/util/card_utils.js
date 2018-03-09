@@ -31,9 +31,21 @@ export class Deck {
 }
 
 export class Card {
+
+  static SUITS = [ '♥', '♦', '♣', '♠' ];
+
+  static VALUES = [
+    'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
+  ];
+
+  static COLORS = Card.SUITS.reduce((colors, suit) => {
+    colors[suit] = (suit === '♥' || suit === '♦') ? 'red' : 'black';
+    return colors;
+  }, {});
+
   static generateAllCards() {
-    return Card.SUITS.reduce((deck, suit) => {
-      const cards = Card.VALUES.map(value => (
+    return this.SUITS.reduce((deck, suit) => {
+      const cards = this.VALUES.map(value => (
         new Card(suit, value)
       ));
 
@@ -41,31 +53,15 @@ export class Card {
     }, []);
   }
 
-  static SUITS = [
-    'hearts',
-    'diamond',
-    'club',
-    'spade'
-  ];
-
-  static VALUES = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13
-  ];
-
   constructor(suit, value) {
-    this.suit = suit;
+    this.suit  = suit;
     this.value = value;
   }
+
+  get color() {
+    return this.constructor.COLORS[this.suit];
+  }
 }
+
+window.Deck = Deck;
+window.Card = Card;

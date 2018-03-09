@@ -1,1 +1,51 @@
-c
+.Card-container {
+  --card-width: 200px;
+  width: calc(var(--card-width));
+  height: calc(var(--card-width) * 1.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: calc(var(--card-width) * 0.05);
+  font-family: 'Londrina Sketch';
+}
+
+.Card-red {
+  color: red;
+}
+
+.Card-black {
+  color: black;
+}
+
+.Card-center {
+  font-size: calc(var(--card-width) * 0.35)
+}
+
+
+.Card-corner-top, .Card-corner-bottom {
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  text-align: center;
+  font-size: calc(var(--card-width) * 0.125);
+  padding: 7px;
+  line-height: 150%;
+}
+
+.Card-corner-top div:nth-child(1) {
+  /* align-items: center; */
+  font-size:calc(var(--card-width) * 0.2)
+}
+
+.Card-corner-bottom div:nth-child(1) {
+  /* align-items: center; */
+  font-size:calc(var(--card-width) * 0.2)
+}
+
+.Card-corner-bottom {
+  transform: rotate(180deg);
+  align-self: flex-end;
+}
