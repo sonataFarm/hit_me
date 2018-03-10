@@ -53,6 +53,6 @@ export class Card {
   }
 
   get color() {
-    return ['♥', '♦'].indexOf(this.suit) > -1 ? 'red' : 'black'
+    return ['♥', '♦'].indexOf(this.suit) > -1 ? 'red' : 'black';
   }
 }
